@@ -1,6 +1,7 @@
 package com.silvercraft.main;
 
 
+import com.silvercraft.handler.SCGuiHandler;
 //import com.silvercraft.handler.TMGuiHandler;
 import com.silvercraft.lib.Strings;
 //import com.silvercraft.tile_entity.TileEntityTutChest;
@@ -20,7 +21,7 @@ public class ServerProxy {
 	}
 	
 	public void registerNetworkStuff(){
-		//NetworkRegistry.INSTANCE.registerGuiHandler(MainRegistry.modInstance, new TMGuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(MainRegistry.modInstance, new SCGuiHandler());
 	}
 
 	public void registerTileEntities(){

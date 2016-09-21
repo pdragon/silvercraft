@@ -23,6 +23,12 @@ public class MainRegistry
 	
 	@Instance(Strings.MODID)
 	public static MainRegistry modInstance;
+	
+	// enumerate gui's
+	public static enum GUI_ENUM 
+	{
+	    AUTOWRENCH, GRINDER, COMPACTOR, DECONSTRUCTOR, TANNING_RACK, FORGE
+	}
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -41,10 +47,12 @@ public class MainRegistry
     }
     @EventHandler
     public void init(FMLInitializationEvent event){
+    	proxy.registerNetworkStuff();
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
     	
     }
+    
 }

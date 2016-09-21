@@ -1,0 +1,69 @@
+package com.silvercraft.handler;
+
+import com.silvercraft.gui.info_book.GuiAutoWrench;
+import com.silvercraft.main.MainRegistry;
+
+import cpw.mods.fml.common.network.IGuiHandler;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class AWGuiHandler implements IGuiHandler
+{
+
+    //@Override
+    public Object getServerGuiElement(
+          int ID, 
+          EntityPlayer player, 
+          World world, 
+          int x, 
+          int y, 
+          int z
+          ) 
+    { 
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null)
+        {
+            if (ID == MainRegistry.GUI_ENUM.AUTOWRENCH.ordinal())
+            {
+                return new ContainerAutoWrench(player.inventory, (IInventory)tileEntity);
+            }
+        }
+
+        return null;
+    }
+
+    @Override
+    public Object getClientGuiElement(
+          int ID, 
+          EntityPlayer player, 
+          World world, 
+          int x, 
+          int y, 
+          int z
+          )
+    {
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null)
+        {
+            if (ID == MainRegistry.GUI_ENUM.AUTOWRENCH.ordinal())
+            {
+                return new GuiAutoWrench(player.inventory, (IInventory)tileEntity);
+            }
+
+       }
+        /*
+        if (ID == BlockSmith.GUI_ENUM.DECONSTRUCTOR.ordinal())
+        {
+            return new GuiDeconstructor(player.inventory, world, 
+                  I18n.format("tile.deconstructor.name"), x, y, z);
+        }
+        */
+        return null;
+    }
+
+
+}

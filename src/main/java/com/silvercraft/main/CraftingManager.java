@@ -32,7 +32,7 @@ public class CraftingManager {
     	GameRegistry.addRecipe(new ItemStack(SCItem.itemSilverShovel), new Object[]{" I "," S "," S ", 'I', SCItem.itemSilverIngot, 'S', Items.stick});
     	GameRegistry.addRecipe(new ItemStack(SCBlock.blockSilverStorage), new Object[]{"III","III","III", 'I', SCItem.itemSilverIngot});
     	GameRegistry.addRecipe(new ItemStack(SCItem.itemSilverIngot, 9), new Object[]{"I", 'I', SCBlock.blockSilverStorage});
-    	GameRegistry.addRecipe(new ItemStack(SCBlock.blockAutoWrench), new Object[]{" I ","   ","I I", 'I', SCItem.itemSilverIngot});
+    	GameRegistry.addRecipe(new ItemStack(SCBlock.blockAutoWorkbench), new Object[]{" I ","   ","I I", 'I', SCItem.itemSilverIngot});
     	
     
 		//Shapeless Recipie
