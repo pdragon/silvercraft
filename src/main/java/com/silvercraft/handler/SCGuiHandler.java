@@ -34,8 +34,9 @@ public class SCGuiHandler implements IGuiHandler {
 			//NetworkRegistry.INSTANCE.registerGuiHandler(MainRegistry.modInstance, new AWGuiHandler());
 		}
 		if(id == MainRegistry.GUI_ENUM.AUTOWRENCH.ordinal()){ 
-			SCTileAutoWorkbench tileAutoWorkbench = (SCTileAutoWorkbench) world.getTileEntity(x, y, z);
-			return new ContainerAutoWorkbench(player.inventory, tileAutoWorkbench);
+			//SCTileAutoWorkbench tileAutoWorkbench = (SCTileAutoWorkbench) world.getTileEntity(x, y, z);
+			//return new ContainerAutoWorkbench(player.inventory, tileAutoWorkbench);
+			//return new ContainerAutoWorkbench();
 		}
 		return null;
 	}
@@ -47,8 +48,9 @@ public class SCGuiHandler implements IGuiHandler {
 			//NetworkRegistry.INSTANCE.registerGuiHandler(MainRegistry.modInstance, new AWGuiHandler());
 		}
 		if(ID == MainRegistry.GUI_ENUM.AUTOWRENCH.ordinal()){
-			SCTileAutoWorkbench tileAutoWorkbench = (SCTileAutoWorkbench) world.getTileEntity(x, y, z);
-			return new GuiAutoCrafting(player.inventory, world, tileAutoWorkbench);
+			//SCTileAutoWorkbench tileAutoWorkbench = (SCTileAutoWorkbench) world.getTileEntity(x, y, z);
+			//return new GuiAutoCrafting(player.inventory, world, tileAutoWorkbench);
+			//return new GuiAutoCrafting(player, world, new SCTileAutoWorkbench());
 		}
 		return null;
 	}
