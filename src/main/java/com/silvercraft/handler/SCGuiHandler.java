@@ -4,11 +4,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.silvercraft.gui.ContainerAutoWorkbench;
-import com.silvercraft.gui.GuiAutoCrafting;
+
 //import com.silvercraft.lib.SCWorld;
 import com.silvercraft.main.MainRegistry;
-import com.silvercraft.tile_entity.SCTileAutoWorkbench;
 
 import buildcraft.factory.TileAutoWorkbench;
 
